@@ -25,7 +25,7 @@ class Child {
     
 }
 
-if let toyName = Child().pet?.toy?.name{
+if (Child().pet?.toy?.name) != nil{
     
 }
 
@@ -39,11 +39,33 @@ Child().pet?.toy?.play()
 
 let playClosure = {(child:Child)->()? in Child().pet?.toy?.play()}
 
-if let result:()=playClosure(Child()){
+if let _:()=playClosure(Child()){
     print("好开心")
 }else{
     print("没有玩具玩")
 }
 
+var name:String? = "Jack"
+name = nil
+
+var age : Int?
+age = 10
+age = nil
+
+var array = [1,2,4,4]
+
+func get(_ index:Int) -> Int? {
+    if index<0 || index > array.count {
+        return nil
+    }
+    return array[index]
+}
+
+print(get(6) as Any);
+print(get(3) as Any)
+
+enum Sea {
+    case <#case#>
+}
 
 
