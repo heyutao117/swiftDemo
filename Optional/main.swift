@@ -64,8 +64,49 @@ func get(_ index:Int) -> Int? {
 print(get(6) as Any);
 print(get(3) as Any)
 
-enum Sea {
-    case <#case#>
+enum Season :Int {
+    case spring = 1, summer, autumn,winter
 }
+
+if let season = Season(rawValue: 6){
+    switch season {
+    case .spring:
+        print("The season is spring")
+    default:
+        print("the season is other")
+    }
+}else{
+    print("no such season")
+}
+
+var strs = ["10","-20","abc","30"]
+var index = 0
+var sum = 0
+while let num = Int(strs[index]),num>0 {
+    sum += num
+    index += 1
+}
+
+print(sum)
+
+let a:Int? = nil
+let b:Int? = 2
+
+if let c = a ?? b{
+    print(c)
+}
+
+struct Point {
+    var x : Int?
+    var y : Int?
+}
+
+
+
+var num2:Int?=nil
+num2? = 10
+print(num2 as Any)
+
+
 
 
